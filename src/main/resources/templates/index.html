@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/home.css}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Secure Chat</h1>
+            <p>Experience secure communication using PGP technology.</p>
+        </header>
+        <main>
+            <div class="action-box">
+                <h2>Login</h2>
+                <p>Already have an account? Login to start your conversation.</p>
+                <a class="button" th:href="@{/login}">Login</a>
+            </div>
+            <div class="action-box">
+                <h2>Register</h2>
+                <p>Don't have an account? Register now and join the chat.</p>
+                <a class="button" th:href="@{/register}">Register</a>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Secure Chat. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

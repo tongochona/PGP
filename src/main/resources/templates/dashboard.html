@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/dashboard.css}">
+<script type="text/javascript" th:src="@{/js/websocket.js}"></script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Welcome to Secure Chat</h1>
+			<p>Experience secure communication using PGP technology.</p>
+		</header>
+		<main>
+			<section class="user-info">
+				<div></div>
+				<a class="button logout" th:href="@{/logout}">Logout</a>
+			</section>
+
+			<section>
+				<div class="greeting-box">
+					<p>
+						Hello, <span th:text="${user.getUsername()}">User</span>!
+					</p>
+				</div>
+			</section>
+
+			<section class="chat-control">
+				<p>Click the "Connect" button below to start your conversation.</p>
+				<div class="connect-box">
+					<button type="button" class="button connect" onclick="connect();">Connect</button>
+				</div>
+			</section>
+			<section class="chat-area">
+				<table>
+					<tr>
+						<td><textarea readonly rows="10" cols="50" id="log"
+								placeholder="Log"></textarea> <textarea readonly rows="10"
+								cols="50" id="cipher" placeholder="Encrypted Messages"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="text" id="sender"
+							th:value="${user.getUsername()}"
+							readonly /> <input type="text" id="receiver"
+							placeholder="Send to" /> <input type="text" size="40" id="msg"
+							placeholder="Message" />
+							<button type="button" class="button send" onclick="send();">Send</button>
+						</td>
+					</tr>
+				</table>
+			</section>
+		</main>
+		<footer>
+			<p>&copy; 2024 Secure Chat. All rights reserved.</p>
+		</footer>
+	</div>
+</body>
+</html>

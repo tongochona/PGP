@@ -1,0 +1,117 @@
+/* Đặt font mặc định và căn chỉnh */
+body {
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container chính */
+.form-container {
+    background-color: #ffffff; /* Màu nền trắng */
+    padding: 20px 30px;
+    border-radius: 8px; /* Góc bo tròn */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    width: 100%;
+    max-width: 400px; /* Giới hạn chiều rộng */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Tiêu đề */
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Các nhãn */
+label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+}
+
+/* Các input */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Viền nhạt */
+    border-radius: 4px; /* Góc bo tròn */
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Nút submit */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Màu xanh */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Hiệu ứng mượt */
+}
+
+button:hover {
+    background-color: #0056b3; /* Màu xanh đậm hơn khi hover */
+}
+
+/* Liên kết */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Thông báo lỗi */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.success-message {
+    color: green;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.form-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+button {
+    background-color: #28a745; /* Màu xanh lá */
+}
+
+button:hover {
+    background-color: #218838; /* Màu xanh lá đậm khi hover */
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}

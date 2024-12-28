@@ -1,0 +1,31 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Chat</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+    <script type="text/javascript" th:src="@{/js/websocket.js}"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="2">
+                <input type="text" id="sender" th:value="${user != null ? user.getUsername() : 'trudy'}" readonly />
+                <button type="button" onclick="connect();">Connect</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <textarea readonly rows="10" cols="80" id="log"></textarea>
+                <textarea readonly rows="10" cols="80" id="cipher"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            	<input type="text" id="sender" th:value="${user != null ? user.getUsername() : 'trudy'}" readonly />
+            	<input type="text" id="receiver" placeholder="Send to" />
+                <input type="text" size="51" id="msg" placeholder="Message" />
+                <button type="button" onclick="send();">Send</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
